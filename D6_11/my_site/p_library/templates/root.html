@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}D6.11 Домашнее задание - главная страница{% endblock %}
+
+{% block content %}
+<h4>Главная страница работы по домашнему заданию 6.11</h4>
+<p>Данная страница служит для доступа к отдельным разделам библиотеки, сделанным в модуле D6.<br>
+Сделана для удобства навигации при проверке домашнего задания 6.11</p><br>
+<p>Логин: пароль для доступа в админку: 1:1</p>
+Выполнены пункты домашнего задания:<br>
+<ul class="list-group">
+<li class="list-group-item"><span class="badge badge-primary badge-pill">1</span>
+    CSS-стили bootstrap раздаются через STATIC для страниц библиотеки.</li>
+<li class="list-group-item"><span class="badge badge-primary badge-pill">2</span>
+    Создан базовый шаблон base.html с блоками, которые переопределены в дочерних шаблонах библиотек.</li>
+<li class="list-group-item"><span class="badge badge-primary badge-pill">3</span>
+    В модель книги добавлена возможность загружать картинки через админку.
+    На странице "список книг в библиотеке" отображается картинка для книги, при её наличии.</li>
+<li class="list-group-item"><span class="badge badge-primary badge-pill">4</span>
+    В файле README.md создано описание проекта.</li>
+</ul><br>
+<p>Ссылки на страницы библиотеки:</p>
+<a href="/admin">Админка</a><br>
+<a href="/authors">Список авторов</a><br>
+<a href="/publishers">Список издательств и выпущенных ими книг</a><br>
+<a href="/index">Список книг в библиотеке</a>
+{% endblock %}

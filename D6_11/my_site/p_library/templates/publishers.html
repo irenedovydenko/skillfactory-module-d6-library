@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Список издательств и выпущенных ими книг{% endblock %}
+
+{% block content %}
+    {% for publisher in publishers %}
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-primary">{{ publisher.pub_title }}</li>
+            {% for book in publisher.book_publisher.all %}
+                <li class="list-group-item">{{ book.title }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+{% endblock %}
